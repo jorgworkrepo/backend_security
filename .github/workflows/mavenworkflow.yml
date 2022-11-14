@@ -19,8 +19,8 @@ jobs:
         with:
           mysql version: '8.0'
           mysql database: 'startcode_test'
-          mysql user: 'dev'
-          mysql password: 'ax2'
+          mysql user: 'root'
+          mysql password: 'admin'
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
