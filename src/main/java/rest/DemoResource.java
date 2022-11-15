@@ -75,6 +75,7 @@ public class DemoResource {
     @Path("setup")
     public String createTestUsers() {
         SetupTestUsers.setupTestUsers();
-        return "{\"msg\": \"Test Users are created!}\"";}
+        return "{\"msg\": \"Test Users are created!}\"";
     }
+
 }
