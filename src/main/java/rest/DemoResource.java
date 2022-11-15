@@ -1,6 +1,7 @@
 package rest;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import entities.User;
 import java.util.List;
 import javax.annotation.security.RolesAllowed;
@@ -26,6 +27,8 @@ public class DemoResource {
     private static final EntityManagerFactory EMF = EMF_Creator.createEntityManagerFactory();
     @Context
     private UriInfo context;
+
+    Gson gson = new GsonBuilder().setPrettyPrinting().create();
 
     @Context
     SecurityContext securityContext;
@@ -75,7 +78,7 @@ public class DemoResource {
     @Path("setup")
     public String createTestUsers() {
         SetupTestUsers.setupTestUsers();
-        return "{\"msg\": \"Test Users are created!}\"";
+        return gson.toJson("Test Users are created!");
     }
 
 }
