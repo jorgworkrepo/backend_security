@@ -14,13 +14,13 @@ jobs:
         with: 
           java-version: '11'
           distribution: 'adopt'
-#      - name: mysql
-#        uses: mirromutth/mysql-action@v1.1
-#        with:
-#          mysql version: '8.0'
-#          mysql database: 'startcode_test'
-#          mysql user: 'tysker'
-#          mysql password: 'Tysker3085!'
+      - name: mysql
+        uses: mirromutth/mysql-action@v1.1
+        with:
+          mysql version: '8.0'
+          mysql database: 'startcode_test'
+          mysql user: 'tysker'
+          mysql password: 'Tysker3085!'
       - name: Cache Maven packages
         uses: actions/cache@v2
         with:
